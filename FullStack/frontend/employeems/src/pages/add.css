@@ -1,0 +1,16 @@
+.table-bordered {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-bordered tr,
+.table-bordered td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Optional: Add some styling for the header */
+.table-bordered tr {
+    background-color: #f2f2f2;
+}

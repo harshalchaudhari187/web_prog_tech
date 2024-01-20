@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--Write a function that accepts two numbers and a operator like (+,-,*, /) from user and performs the
+appropriate operation indicated by the operator-->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+  <script>
+    function calc() {
+      var first = parseFloat(document.getElementById("first").value);
+      var second = parseFloat(document.getElementById("second").value);
+      var op = document.getElementById("op").value;
+      var result = "";
+      switch (op) {
+        case "+":
+          result = `Addition is:  ${first + second}`;
+          break;
+        case "-":
+          result = `Subtraction is:${first - second}`;
+          break;
+        case "*":
+          result = `Multiplication is: ${first * second}`;
+          break;
+        case "/":
+          result = `Division is: ${first / second}`;
+          break;
+        default:
+          result = "Enter a correct operator ";
+      }
+      document.getElementById("result").innerHTML = result;
+    }
+  </script>
+  <style>
+    .parent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #child1,
+    #child2,
+    #child3,
+    #child4 {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="parent">
+    <div id="child1">
+      <label for="">Enter first Number</label>
+      <input type="number" id="first" />
+    </div>
+    <div id="child2">
+      <label for="">Enter Second Number</label>
+      <input type="number" id="second" />
+    </div>
+    <div id="child3">
+      <label for="">Enter operator like: + - * /</label>
+      <input type="text" id="op" />
+    </div>
+    <div id="child4">
+      <button type="button" onclick="calc()">Calculate</button>
+    </div>
+    <div id="result"></div>
+  </div>
+</body>
+
+</html>

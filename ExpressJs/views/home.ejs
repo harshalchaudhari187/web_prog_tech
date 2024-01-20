@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    /* Add this in your CSS file or within a <style> tag */
+    .table-bordered {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .table-bordered th,
+    .table-bordered td {
+      border: 1px solid #dddddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    /* Optional: Add some styling for the header */
+    .table-bordered th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h2>Employees</h2>
+    <h4><a href="/create">Add Employee</a> </h4>
+  </header>
+  <table class="table-bordered">
+    <thead>
+      <tr>
+        <th>Emp Id</th>
+        <th>Emp Name</th>
+        <th>Emp Basic</th>
+        <th>Emp address</th>
+        <th>actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%for(var i=0;i<empData.length;i++){%>
+        <tr>
+          <td>
+            <%=empData[i].empId%>
+          </td>
+          <td>
+            <%=empData[i].name%>
+          </td>
+          <td>
+            <%=empData[i].basic%>
+          </td>
+          <td>
+            <%=empData[i].address%>
+          </td>
+          <td><a href="/edit/<%=empData[i].empId%>">edit</a> <a href="/delete/<%=empData[i].empId%>">delete</a></td>
+        </tr>
+        <%}%>
+    </tbody>
+  </table>
+</body>
+
+</html>

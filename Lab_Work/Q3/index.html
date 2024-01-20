@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>The Story Maker</title>
+  </head>
+  <body>
+    <h1><b>Mad Libs</b></h1>
+    <div class="first-section">
+      <table>
+        <form>
+          <tr>
+            <th>Person Name:</th>
+            <td><input type="text" id="name" /></td>
+          </tr>
+          <tr>
+            <th>Character:</th>
+            <td><input type="text" id="character" /></td>
+          </tr>
+          <tr>
+            <th>Adverb:</th>
+            <td><input type="text" id="Adverb" /></td>
+          </tr>
+          <tr>
+            <th>Adjective:</th>
+            <td><input type="text" id="Adjective" /></td>
+          </tr>
+          <tr>
+            <td>
+              <br />
+              <br />
+              <button type="button" onclick="showStory()">Tell Story</button>
+            </td>
+          </tr>
+        </form>
+      </table>
+    </div>
+    <div style="border: 1px solid grey; margin: 20px">
+      <div id="show"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

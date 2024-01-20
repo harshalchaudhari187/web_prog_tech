@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+.image{
+    border: 2px solid black;
+}
+img{
+    height: 200px;
+    width:300px;
+object-fit: cover;
+}
+p{
+    padding-left: 5px;
+}
+header{
+    text-align: left;
+}
+body{
+    border: 2px solid rgb(6, 131, 233);
+    padding: 5px;
+}

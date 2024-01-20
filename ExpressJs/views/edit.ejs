@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Employee</title>
+    <style>
+        /* Add this in your CSS file or within a <style> tag */
+        .table-bordered {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .table-bordered tr,
+        .table-bordered td {
+            border: 1px solid #dddddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        /* Optional: Add some styling for the header */
+        .table-bordered tr {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>Update Employee</h2>
+    </header>
+    <table class="table-bordered">
+        <form action="/update" method="post">
+            <tr>
+                <td>EmpId <input type="text" name="empId" readonly value="<%=empData[0].empId%>" /></td>
+            </tr>
+            <tr>
+                <td>Emp Name <input type="text" name="name" value="<%=empData[0].name%>" /></td>
+            </tr>
+            <tr>
+                <td>Emp Basic <input type="number" name="basic" value="<%=empData[0].basic%>" /></td>
+            </tr>
+            <tr>
+                <td>Emp Address <input type="text" name="address" value="<%=empData[0].address%>" /></td>
+            </tr>
+            <tr>
+                <td><button type="submit">Update Employee</button></td>
+            </tr>
+            <tr>
+                <td><a href="/home">Back to List</a></td>
+            </tr>
+        </form>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+/* Add this in your CSS file or within a <style> tag */
+.table-bordered {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .table-bordered th, .table-bordered td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  /* Optional: Add some styling for the header */
+  .table-bordered th {
+    background-color: #f2f2f2;
+  }
+  

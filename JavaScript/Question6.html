@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--Write a program to find sum of digits of given five-digit number-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Digits</title>
+    <script>
+        function findSum() {
+            var num = document.getElementById("num").value
+            //Break each letter into array element --split()
+            //Convert array element from string to number -- map()
+            var arr = num.split('').map(Number)
+            var sum = arr.reduce((acc, val) => acc + val)
+            document.getElementById("result").innerHTML = " Sum of " + num + " is " + sum
+        }
+    </script>
+    <style>
+        .parent {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #child1,
+        #child2,
+        button,
+        #result {
+            margin-bottom: 10px;
+        }
+
+        button {
+            font-size: 15px
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parent">
+        <div id="child1">
+            <label for="">Enter a five digit number</label>
+            <input type="text" id="num" />
+        </div>
+        <div id="child2">
+            <button type="button" onclick="findSum()">Find Sum</button>
+        </div>
+        <div id="result"></div>
+    </div>
+</body>
+
+</html>

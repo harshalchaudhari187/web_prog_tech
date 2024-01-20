@@ -1,0 +1,24 @@
+html{
+    margin-top: 10px;
+    margin-left: 15px;
+    text-align: left;
+}
+header{
+    text-align: center;
+    text-decoration: underline;
+}
+td,th{
+padding-right: 40px;
+text-align:left;
+}
+h2{
+    font-size: 22px;
+    text-decoration:underline;
+
+}
+table{
+    margin-bottom: 50px;
+}
+#secondtable td{
+    font-style: italic;
+}

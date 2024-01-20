@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Write a program to accept three positive numbers and output the largest of them-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest number</title>
+    <script>
+        function findLargest() {
+            var first = parseFloat(document.getElementById("first").value)
+            var second = parseFloat(document.getElementById("second").value)
+            var third = parseFloat(document.getElementById("third").value)
+            if (first > second && first > third) {
+                document.getElementById("result").innerHTML = `First is largest ${first}`
+            } else if (second > third) {
+                document.getElementById("result").innerHTML = `Second is largest ${second}`
+            } else
+                document.getElementById("result").innerHTML = `third is largest ${third}`
+        }
+    </script>
+    <style>
+        .parent {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #child1,
+        #child2,
+        #child3,
+        #child4 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div id="child1">
+            <label for="">Enter first Number</label>
+            <input type="number" id="first" />
+        </div>
+        <div id="child2">
+            <label for="">Enter Second Number</label>
+            <input type="number" id="second" />
+        </div>
+        <div id="child3">
+            <label for="">Enter Third Number</label>
+            <input type="number" id="third">
+        </div>
+        <div id="child4">
+            <button type="submit" onclick="findLargest()">Click to Check Largest</button>
+        </div>
+        <div id="result"></div>
+    </div>
+
+</body>
+
+</html>

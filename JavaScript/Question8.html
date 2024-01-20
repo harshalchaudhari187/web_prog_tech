@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--Write a function pow(x,y) that calculates xy. Do not use the Math predefined objet-->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finding power</title>
+  <script>
+    function find() {
+      var base = parseInt(document.getElementById("base").value);
+      var power = parseInt(document.getElementById("power").value);
+      var str = 1;
+      for (var i = 1; i <= power; i++) {
+        str *= base;
+      }
+
+      document.getElementById(
+        "result"
+      ).innerHTML = `${base} is raised to the power ${power} is : ${str}`;
+    }
+  </script>
+  <style>
+    .parent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #child1,
+    #child2,
+    #child3,
+    #result {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="parent">
+    <div id="child1">
+      <label for="">Enter base</label>
+      <input type="text" id="base" />
+    </div>
+    <div id="child2">
+      <label for="">Enter power</label>
+      <input type="text" id="power" />
+    </div>
+    <div id="child3">
+      <button type="button" onclick="find()">Calculate</button>
+    </div>
+    <div id="result"></div>
+  </div>
+</body>
+
+</html>

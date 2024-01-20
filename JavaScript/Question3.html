@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--Write a function to list all even numbers less than or equal to the number n. Take the value of n as input
+from user. Use while loop-->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Even Number</title>
+  <script>
+    function printEven() {
+      var num = parseInt(document.getElementById("number").value);
+      var i = 2;
+      var list = "";
+      while (num >= i) {
+        if (i % 2 === 0) list += " " + i;
+        i++;
+      }
+      document.getElementById("result").innerHTML =
+        "Even numbers are : " + list.trim();
+    }
+  </script>
+  <style>
+    .parent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #child1 {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="parent">
+    <div id="child1">
+      <label>Enter a number </label>
+      <input type="text" id="number" />
+    </div>
+    <div id="btn">
+      <button type="button" onclick="printEven()">Print Even Numbers</button>
+    </div>
+    <p id="result"></p>
+  </div>
+</body>
+
+</html>

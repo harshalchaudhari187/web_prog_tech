@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--Accept an integer value and a message from user and print the message that many number of times-->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Print Message</title>
+  <script>
+    function printMsg() {
+      var msg = document.getElementById("msg").value;
+      var count = parseInt(document.getElementById("count").value);
+      if (count > 0) {
+        var pattern = msg;
+
+        for (var i = 1; i < count; i++) {
+          pattern += "<br>" + msg;
+        }
+
+        document.getElementById("result").innerHTML = pattern;
+      } else {
+        document.getElementById("result").innerHTML =
+          "Please enter a count greater than 0.";
+      }
+    }
+  </script>
+  <style>
+    .parent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #child1,
+    #child2 {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="parent">
+    <div id="child1">
+      <label for="">Enter your message</label>
+      <input type="text" id="msg" />
+    </div>
+    <div id="child2">
+      <label for="">Enter number of printing</label>
+      <input type="text" id="count" />
+    </div>
+    <div id="btn">
+      <button type="button" onclick="printMsg()">Print</button>
+    </div>
+    <label id="result"></label>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registration Details</title>
+  <style>
+    body {
+      background-color: #196dc0;
+      color: white;
+      font-size: larger;
+    }
+
+    fieldset {
+      margin: 80px;
+      border: 2px solid white;
+      /* width: 1200; */
+    }
+
+    legend {
+      font-size: x-large;
+      color: white;
+    }
+
+    tr {
+      height: 50px;
+      font-size: larger;
+    }
+
+    .longest {
+      width: 780px;
+      height: 25px;
+    }
+
+    .left {
+      text-align: right;
+      width: 600px;
+    }
+
+    .left2 {
+      text-align: right;
+      width: 300px;
+    }
+
+    .middle {
+      width: 30px;
+    }
+
+    .middle2 {
+      width: 30px;
+      text-align: left;
+      padding-right: 20px;
+      margin-right: 50px;
+    }
+
+    .right {
+      text-align: left;
+      margin: 20px;
+    }
+
+    table {
+      margin-left: 70px;
+      margin-right: 70px;
+      border: 3px solid black;
+      width: 1400px;
+    }
+  </style>
+</head>
+
+<body>
+  <fieldset>
+    <legend>Registration Details</legend>
+    <table>
+      <br /><br />
+      <tr>
+        <td class="left"><label for="uni">University :</label><br /></td>
+        <td class="middle"></td>
+        <td class="right">
+          <input type="text" name="uni" id="uni" class="longest" />
+        </td>
+      </tr>
+      <tr>
+        <td class="left"><label for="insti">Institute :</label><br /></td>
+        <td class="middle"></td>
+        <td class="right">
+          <input type="text" name="insti" id="insti" class="longest" />
+        </td>
+      </tr>
+      <tr>
+        <td class="left"><label for="insti">Branch :</label><br /></td>
+        <td class="middle"></td>
+        <td class="right">
+          <select class="right" id="programs">
+            <option>--select--</option>
+            <option>DAC</option>
+            <option>DITISS</option>
+            <option>DESD</option>
+            <option>DBDA</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td class="left2"><label for="insti">Degree :</label><br /></td>
+        <td class="middle"></td>
+        <td class="right">
+          <select class="right" id="programs">
+            <option>--select--</option>
+            <option>Btech</option>
+            <option>Bsc</option>
+            <option>BCA</option>
+            <option>MCA</option>
+          </select>
+        </td>
+        <td class="left" class="radio">
+          <input type="radio" name="degree" id="admin" /><label for="Pursuing">Pursuing</label>
+          <input type="radio" name="degree" id="hr" /><label for="Completed">Completed</label>
+        </td>
+      </tr>
+      <tr>
+        <td class="left">
+          <label for="insti">Average CPI :</label><br />
+        </td>
+        <td class="middle"></td>
+
+        <td class="right">
+          <input type="number" name="insti" id="insti" />
+        </td>
+        <td class="middle2">
+          <label for="">Upto</label>
+          <input type="number" name="insti" id="insti" />
+          <label>Th Semester</label>
+        </td>
+      </tr>
+    </table>
+    <br /><br />
+  </fieldset>
+  <!-- <button style="shape-outside: -webkit-gradient();"></button>
+    Step 2
+    <button></button> -->
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circle</title>
+    <script>
+      function calc() {
+        console.log("inside calc");
+        var num = parseFloat(document.getElementById("number").value);
+        var area = circle.area(num).toFixed(0);
+        var circum = circle.circumference(num).toFixed(0);
+
+        document.getElementById("area").innerHTML = "Area : " + area;
+        document.getElementById("circumference").innerHTML =
+          "Circumference : " + circum;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="parent">
+      <div id="child1">
+        <label>Enter Radius </label>
+        <input type="text" id="number" />
+      </div>
+      <div id="btn">
+        <button type="button" onclick="calc()">display</button>
+      </div>
+      <p id="area"></p>
+      <p id="circumference"></p>
+    </div>
+    <script>
+      const circle = {
+        area(radius) {
+          return radius * radius * Math.PI;
+        },
+        circumference(radius) {
+          return 2 * Math.PI * radius;
+        },
+      };
+    </script>
+  </body>
+</html>

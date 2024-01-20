@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--Write a program min() that takes any number of arguments and returns minimum number in the set of
+arguments. Do not use the Math predefined objet-->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minimum</title>
+</head>
+
+<body>
+  <script>
+    function min() {
+      if (arguments.length === 0) {
+        console.error("No argument provided");
+      } else {
+        var minVal = arguments[0];
+        for (var i = 1; i <= arguments.length; i++) {
+          if (arguments[i] < minVal) minVal = arguments[i];
+        }
+        return minVal;
+      }
+    }
+    const result = min(5, 3, 6, 1, 2, 7, 3);
+    console.log("Minimum number is : " + result);
+  </script>
+</body>
+
+</html>

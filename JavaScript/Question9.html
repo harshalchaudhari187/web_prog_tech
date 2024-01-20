@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compound Interest Calculator</title>
+    <script>
+      function calc() {
+        var p = parseFloat(document.getElementById("principal").value);
+        var r = parseFloat(document.getElementById("rate").value);
+        var n = parseFloat(document.getElementById("period").value);
+        var sum = 1 + r / 100;
+        var CI = p * Math.pow(sum, n) - p;
+        document.getElementById("result").innerHTML = CI.toFixed(2);
+      }
+    </script>
+    <style>
+      #result {
+        border: 1px solid black;
+        padding: 5px;
+      }
+      table {
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        padding: 8px; /* Added padding for cell content spacing */
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <span>---------------------------------------------------------------</span>
+    <h1>*************Calculate Compound Interest***************</h1>
+    <span>---------------------------------------------------------------</span>
+    <table>
+      <tr>
+        <th>Principal</th>
+        <td><input type="number" id="principal" /></td>
+      </tr>
+      <tr>
+        <th>Rate of Interest</th>
+        <td><input type="number" id="rate" /></td>
+      </tr>
+      <tr>
+        <th>Period</th>
+        <td><input type="number" id="period" /></td>
+      </tr>
+      <tr>
+        <th>Compound Interest</th>
+        <td><label id="result">Your Interest will be here</label></td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" onclick="calc()">Calculate</button>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
